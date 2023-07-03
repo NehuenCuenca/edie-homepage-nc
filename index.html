@@ -7,7 +7,10 @@
   <link rel="icon" href="devchallenges.png" />
   <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
   <link rel="stylesheet" href="styles.css">
-  <title>Devchallenges</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  <title>Devchallenges</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
 </head>
 
 <body>
@@ -34,14 +37,135 @@
     </nav>
   </header>
   <main>
-    <section id="Home">Home</section>
-    <section id="Services">Services</section>
-    <section id="Works">Works</section>
-    <section id="Team">Team</section>
-    <section id="Clients">Clients</section>
-    <section id="Contact">Contact</section>
+    <section id="Home">
+      <div class="before-img">
+        <h6>Unhappy with your website?</h6>
+        <h3>We create beautiful and fast web services</h3>
+      </div>
+      
+      <img id="heroImage" src="assets/images/heroImage.jpg" alt="Board planification image">
+      
+      <div class="after-image">
+        <h3>Story, emotion and purpose</h3>
+        <p>We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</p>
+        
+        
+        <form class="to-contact-you">
+          <h6>Want us to contact you?</h6>
+          <div class="wrapper">
+            <input type="email" name="email-field" id="email-field" placeholder="Email">
+            <button type="submit">Join</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section id="Services">
+      <h5>We offer high demand services</h5>
+      <ul class="list-services">
+        <li class="card-service">
+          <i class="material-symbols-outlined">edit</i>
+          <span class="title-service">UI/UX Design</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
+          <button type="button">Get started</button>
+        </li>
+        <li class="card-service">
+          <i class="material-symbols-outlined">code</i>
+          <span class="title-service">UI/UX Design</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
+          <button type="button">Get started</button>
+        </li>
+        <li class="card-service">
+          <i class="material-symbols-outlined">dns</i>
+          <span class="title-service">UI/UX Design</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
+          <button type="button">Get started</button>
+        </li>
+      </ul>
+
+    </section>
+    <section id="Works">
+      <h5>Good design means good business</h5>
+      <ul class="list-projects">
+        <li class="card-project">
+          <img src="assets/images/smarthome.jpg" alt="">
+          <span class="type-project">Full stack application</span>
+          <span class="title-project">Smart home dashboard</span>
+        </li>
+        <li class="card-project">
+          <img src="assets/images/onboard.png" alt="">
+          <span class="type-project">UX/UI design</span>
+          <span class="title-project">Onboard application</span>
+        </li>
+        <li class="card-project">
+          <img src="assets/images/booking.png" alt="">
+          <span class="type-project">Mobile application</span>
+          <span class="title-project">Booking system</span>
+        </li>
+        <li class="card-project">
+          <img src="assets/images/juice-product.png" alt="">
+          <span class="type-project">Front End application</span>
+          <span class="title-project">Juice product homepage</span>
+        </li>
+      </ul>
+      <a href="#" id="see-all-projects">see more ➡</a>
+    </section>
+    <section id="Team">
+      <div class="description-team">
+        <span class="tiny-text">Meet the team</span>
+        <h5>We are chilled and a laidback team</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="grid-gallery-team">
+        <img src="assets/images/person3.png" alt="img3">
+        <img src="assets/images/person1.png" alt="img1">
+        <img src="assets/images/person2.png" alt="img2">
+      </div>
+    </section>
+    <section id="Clients">
+      <h5 class="phrase">“Fast and outstanding resutls. Edie understands their customer’s needs. They have a young and talented team.”    </h5>
+      <div class="card-client">
+        <img src="assets/images/person4.png" alt="">
+        <span class="name">Carlos Tran</span>
+        <span class="enterprise">The Decorate Gatsby</span>
+      </div>
+    </section>
+    <!-- <section id="Contact">Contact</section> -->
   </main>
-  <footer>FOOTER</footer>
+  <footer id="Contact">
+    <ul class="list-sections">
+      <li>
+        <a href="#Home">Home</a>
+      </li>
+      <li>
+        <a href="#Services">Services</a>
+      </li>
+      <li>
+        <a href="#Works">Our Works</a>
+      </li>
+      <li>
+        <a href="#Clients">Clients</a>
+      </li>
+      <li>
+        <a href="#Contact">Contact</a>
+      </li>
+    </ul>
+    <div class="socials">
+      <span class="logo">Edie</span>
+      <ul class="list-social-networks">
+        <li class="social-link">📷</li>
+        <li class="social-link">🐦</li>
+        <li class="social-link">💼</li>
+      </ul>
+    </div>
+    <form class="to-contact-you">
+      <h6>Want us to contact you?</h6>
+      <div class="wrapper">
+        <input type="email" name="email-field" id="email-field" placeholder="Email">
+        <button type="submit">Join</button>
+      </div>
+    </form>
+    <span class="created-by">created by Nehuen - devChallenges.io</span>
+  </footer>
 </body>
 
 </html>
