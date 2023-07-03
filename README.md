@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">Edie Homepage by NC</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://edie-homepage-nc.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/jhJ1PDlGXDngmMqoAklm">
       Solution
     </a>
     <span> | </span>
@@ -27,7 +27,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
-  - [Built With](#built-with)
+- [Built With](#built-with)
 - [Features](#features)
 - [How to use](#how-to-use)
 - [Contact](#contact)
@@ -85,10 +85,10 @@ $ npm start
 ## USER STORYS:
 Challenge: Create a static page with HTML and CSS following the designs. Don’t look at the existing solution. Fulfill user stories below:
 
-User story: I can see a page following the given design
-User story: I can see a page on mobile following the given design
-User story: I can go to certain locations by selecting links in navigation or footer
-Surprise me with mobile navigation.
+User story: I can see a page following the given design ✅
+User story: I can see a page on mobile following the given design ✅
+User story: I can go to certain locations by selecting links in navigation or footer ✅
+Surprise me with mobile navigation. 👀
 
 Icon: https://google.github.io/material-design-icons/
 
