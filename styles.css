@@ -267,6 +267,7 @@ section#Works{
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
 }
+
 #Works ul.list-projects li.card-project {
     width: 95%;
     display: flex;
@@ -282,7 +283,11 @@ li.card-project img {
     width: 100%;
     height: auto;
     border-radius: 1.5rem;
+    filter: blur(2px) grayscale(100%);
+    transition: filter 0.25s ease-in-out;
 }
+#Works ul.list-projects li.card-project:hover img { filter: blur(0px) grayscale(0%); }
+
 li.card-project .type-project { 
     font: 300 .9rem 'Poppins', sans-serif;
     color: #828282;
@@ -294,8 +299,6 @@ li.card-project .title-project { font: 500 1.5rem 'Poppins', sans-serif;}
     color: #2D9CDB;
     place-self: end;
 }
-
-
 
 section#Team{
     grid-area: Team;
