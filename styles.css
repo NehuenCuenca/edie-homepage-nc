@@ -1,14 +1,13 @@
 /* https://www.figma.com/file/ahnGupP4JjTdVJDTRfMRF2/edie-homepage?type=design&node-id=0-1&mode=design&t=vSll6RBR97Tnohq2-0 */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@700&family=Poppins:wght@300;400;500;700&display=swap');
-/* font-family: 'Heebo', sans-serif; */
-/* font-family: 'Montserrat', sans-serif; */
-/* font-family: 'Poppins', sans-serif; */
+
 
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth
 }
 
 html{
@@ -42,6 +41,8 @@ a {
     color: inherit;
 }
 
+img { -webkit-user-drag: none;}
+
 header {
     grid-area: header;
     width: 100%;
@@ -60,6 +61,28 @@ header #navbar ul {
     align-items: center;
 }
 header nav #hamburguer-menu { display: none; }
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 
 main {
     display: grid;
@@ -146,6 +169,7 @@ form.to-contact-you input {
     padding: .8rem;
     padding-right: 40%;
     border-radius: 12px;
+    background-color: #F2F2F2;
 }
 form.to-contact-you button[type="submit"] {
     position: absolute;
@@ -188,9 +212,10 @@ section#Services{
     row-gap: 1.5vh;
     padding: 5% 3%;
     border-radius: 1.5rem;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
-li.card-service:hover { box-shadow: 0px 10px 30px 0px #3333331A; }
+li.card-service:hover { box-shadow: 0px 10px 30px 0px #33333372; }
 
 li.card-service i {
     width: 67px;
@@ -245,6 +270,7 @@ section#Works{
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
 }
+
 #Works ul.list-projects li.card-project {
     width: 95%;
     display: flex;
@@ -260,7 +286,11 @@ li.card-project img {
     width: 100%;
     height: auto;
     border-radius: 1.5rem;
+    filter: blur(2px) grayscale(100%);
+    transition: filter 0.25s ease-in-out;
 }
+#Works ul.list-projects li.card-project:hover img { filter: blur(0px) grayscale(0%); }
+
 li.card-project .type-project { 
     font: 300 .9rem 'Poppins', sans-serif;
     color: #828282;
@@ -272,8 +302,6 @@ li.card-project .title-project { font: 500 1.5rem 'Poppins', sans-serif;}
     color: #2D9CDB;
     place-self: end;
 }
-
-
 
 section#Team{
     grid-area: Team;
