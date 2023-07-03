@@ -44,7 +44,6 @@ a {
 
 header {
     grid-area: header;
-    background-color: aquamarine;
     width: 100%;
     padding: 1rem 2rem;
     display: flex;
@@ -60,14 +59,13 @@ header #navbar ul {
     justify-content: space-between;
     align-items: center;
 }
-
+header nav #hamburguer-menu { display: none; }
 
 main {
     display: grid;
     grid-template-columns: 100%;
     grid-auto-rows: auto;
     grid-area: main;
-    background-color: lightsteelblue;
     grid-template-areas: 
     "Home"
     "Services"
@@ -85,7 +83,6 @@ main section {
 
 section#Home{
     grid-area: Home;
-    background-color: beige;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(3, auto);
@@ -414,3 +411,146 @@ ul.list-social-networks li.social-link { font-size: 2rem; }
     place-items: end center;
 }
 
+
+@media (max-width: 375px) {
+
+    body { max-width: 375px; }
+    header { padding: .5rem; }
+    span.logo { font: 800 2.25rem 'Heebo', sans-serif; }
+    header #navbar ul { display: none; }
+    header nav { 
+        display: grid;
+        align-items: center;
+        justify-items: end;
+    }
+    header nav #hamburguer-menu { display: block; }
+
+    section#Home{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "beforeImage"
+        "image"
+        "afterImage";
+        row-gap: 5vh;
+        padding: 5%;
+    }
+    
+    #Home .before-img {
+        width: 100%;
+        padding: 0 10%;
+    }
+    
+    .before-img h6 { font-size: 12px; }
+    .before-img h3, .after-image h3 { font-size: 1.5rem; }
+    
+    #Home img#heroImage { width: 100%; }
+    #Home .after-image {
+        width: 100%;
+        padding: 0 10%;
+    }
+    .after-image h3 { width: 70%;}
+    .after-image p  { font-size: 12px;}
+        
+    form.to-contact-you h6 { font-size: 10px; }
+    form.to-contact-you .wrapper > * { font-size: 14px; }
+
+
+    section#Services{ width: 100%; }
+    
+    #Services h5 {
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    
+    #Services .list-services { flex-direction: column; }
+    
+    .list-services li.card-service {
+        width: 100%;
+        padding: 20% 3%;
+    }
+   
+
+    section#Works{ 
+        padding: 5%;
+        gap: 3vh 0;
+    }
+    
+    #Works h5 {
+        width: 80%;
+        font-size: 1.5rem;
+        justify-self: center;
+    }
+    #Works ul.list-projects {
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        gap: 5vh 0;
+    }
+    #Works ul.list-projects li.card-project { width: 100%; }
+    
+    #Works ul.list-projects li.card-project:nth-child(2n+1) {
+        padding-top: 0;
+        place-self: inherit;
+    }
+    
+    li.card-project .type-project  { font-size: 12px; }
+    li.card-project .title-project { font: 500 1.125rem 'Poppins', sans-serif; }
+    
+    #Works a#see-all-projects { 
+        font-size: 1.125rem;
+        place-self: start;
+    }
+    
+    section#Team{
+        grid-template-columns: 100%;
+        grid-auto-rows: auto;
+        grid-template-areas: "description"
+        "gallery";
+    }
+
+    
+    #Team .grid-gallery-team {
+        grid-area: gallery;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-auto-rows: auto;
+        grid-template-areas:
+            "img1 img2"
+            "img1 img3";
+        gap: 1vw 2vh;
+        justify-self: end;
+    }
+    
+    .grid-gallery-team img { 
+        width: 100%;
+        height: auto;
+    }
+    .grid-gallery-team img:nth-child(2) { width: 85%; }
+        
+    section#Clients{ padding: 20% 10%; }
+
+    #Clients h5.phrase {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    #Clients .card-client {
+        grid-template-columns: 30% auto;
+        justify-content: space-between;
+    }
+    .card-client img{ place-self: center; }
+
+        
+    footer#Contact {
+        padding: 10% 10% 5% 10%;
+        grid-template-columns: 100%;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "sections" 
+        "socials"
+        "form"
+        "createdby";
+        gap: 10vh 0;
+    }
+}
