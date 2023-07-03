@@ -41,6 +41,8 @@ a {
     color: inherit;
 }
 
+img { -webkit-user-drag: none;}
+
 header {
     grid-area: header;
     width: 100%;
@@ -210,9 +212,10 @@ section#Services{
     row-gap: 1.5vh;
     padding: 5% 3%;
     border-radius: 1.5rem;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
-li.card-service:hover { box-shadow: 0px 10px 30px 0px #3333331A; }
+li.card-service:hover { box-shadow: 0px 10px 30px 0px #33333372; }
 
 li.card-service i {
     width: 67px;
